@@ -12,19 +12,67 @@ body {
   background-color: #151515;
 }
 
-.card {
+.clr-purple {
+  background-color: #6e72fc;
+}
+
+.up-and-down {
+  animation: up-and-down 1s infinite ease-out alternate;
+}
+
+@keyframes up-and-down {
+  100% {
+    transform: translateY(-1.2rem);
+  }
+}
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grp {
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  width: 80vw;
-  background-color: #151515;
-  padding: 2rem;
-  border-radius: 2rem;
+  align-items: center;
+  justify-content: center;
   margin: 1rem;
 }
 
-.card > img {
+.grp > * {
+  margin-block: 0.5rem;
+}
+
+.container {
+  width: 100vw;
+  background-color: #151515;
+  margin-block: 1rem;
+}
+
+.txt-info {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-large {
+  font-size: 2rem;
+  color: white;
+}
+.bold {
+  font-weight: 600;
+}
+.rounded {
+  border-radius: 2rem;
+}
+.grp > img {
   width: 100%;
 }
 

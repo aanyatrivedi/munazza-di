@@ -32,17 +32,31 @@ const scene = new ScrollMagic.Scene({
 
 // Intersection
 
-const target = document.querySelector(".confetti-element");
+performCallbackOnIntersection({
+  target: document.querySelector(".confetti-element"),
+  callback: () => {
+    party.confetti(document.querySelector(".confetti-element"), {
+      count: party.variation.range(50, 70),
+    });
+  },
+});
 
-const options = {
-  root: document.querySelector("null"),
-  threshold: 1,
-};
+performCallbackOnIntersection({
+  target: document.querySelector(".show-confetti-element"),
+  callback: () => {
+    party.confetti(document.querySelector(".show-confetti-element"), {
+      count: party.variation.range(50, 70),
+    });
+  },
+});
 
-const observer = new IntersectionObserver((entries) => {
-  if (!entries[0].isIntersecting) return;
-  party.confetti(target, {
-    count: party.variation.range(50, 70),
-  });
-}, options);
-observer.observe(target);
+// toggleClassesOnIntersection({
+//   target: document.querySelector("img.rounded"),
+//   classNames: ["magictime", "swap"],
+// });
+//set timer to 5 seconds, after that, load the magic animation
+// function myFunction() {
+//   const selector = document.querySelector(".grp");
+//   selector.classList.add("magictime", "swap");
+// }
+// myFunction();
