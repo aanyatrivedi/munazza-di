@@ -1,0 +1,106 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100vw;
+  background-color: #151515;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  background-color: #151515;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.pulsate {
+  animation: pulsating 1s infinite ease-out;
+}
+
+@keyframes pulsating {
+  0% {
+    transform: scale(0.8);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.styled-text {
+  font-size: 4rem;
+  /* background: linear-gradient(45deg, #ad1deb 50%, #6e72fc 50%);
+  -webkit-background-clip: text;
+  background-clip: text; */
+  color: #6e72fc;
+}
+
+header,
+footer {
+  border: none;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #151515;
+  color: rgb(0 122 255);
+  /* background-image: linear-gradient(
+    50deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(284deg 100% 28%) 33%,
+    hsl(328deg 100% 35%) 50%,
+    hsl(11deg 100% 43%) 67%,
+    hsl(55deg 100% 50%) 100%
+  ); */
+}
+
+.bday-girl-img {
+  /* position: absolute; */
+  width: 100vw;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+.animation {
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #151515;
+}
+
+.paper-plane {
+  width: 8rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
