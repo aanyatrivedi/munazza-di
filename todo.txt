@@ -1,0 +1,11 @@
+1)
+The end animation
+
+2)
+Scroll Snapping
+
+3)
+Desktop Optimization
+
+4)
+Intersection Observer - Perform once per intersection and then stop
