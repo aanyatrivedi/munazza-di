@@ -60,3 +60,13 @@ performCallbackOnIntersection({
 //   selector.classList.add("magictime", "swap");
 // }
 // myFunction();
+
+function bringElementIntoView({ element }) {
+  element.scrollIntoView({ behavior: "smooth" });
+}
+
+// setTimeout(() => {
+//   bringElementIntoView({
+//     element: document.querySelector(".grp:last-child"),
+//   });
+// }, 2000);
