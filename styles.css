@@ -34,6 +34,7 @@ body {
 }
 
 .grp {
+  scroll-snap-align: start;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -51,6 +52,7 @@ body {
   width: 100vw;
   background-color: #151515;
   margin-block: 1rem;
+  scroll-snap-type: y mandatory;
 }
 
 .txt-info {

@@ -33,10 +33,9 @@ function performCallbackOnIntersection({ target, callback, once = true }) {
   const observer = new IntersectionObserver((entries) => {
     if (!entries[0].isIntersecting) return;
     callback();
-    console.count("CB - run - times");
-    // if (once) {
-    //   observer.unobserve(entries[0].target);
-    // }
+    if (once) {
+      observer.unobserve(entries[0].target);
+    }
   }, options);
   observer.observe(target);
 }
